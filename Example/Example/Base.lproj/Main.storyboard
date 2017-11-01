@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jy5-Ki-Qq6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Download-->
+        <scene sceneID="s6J-Zy-iwp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jy5-Ki-Qq6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Download" id="vZt-JH-4eC"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qi5-Rl-rXI">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BeG-vj-TkH" kind="relationship" relationship="rootViewController" id="vUM-9O-99g"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dxw-x1-ub9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8506" y="-4289"/>
+        </scene>
+        <!--Example Controller-->
+        <scene sceneID="5ei-MO-psC">
+            <objects>
+                <tableViewController id="BeG-vj-TkH" customClass="ExampleController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="60w-ad-bmh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Caf-bW-wOP">
+                            <rect key="frame" x="0.0" y="108" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExampleCell" rowHeight="80" id="FEI-yZ-Tyo" customClass="ExampleCell" customModule="Example" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FEI-yZ-Tyo" id="Hgs-Zd-fkt">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5as-4P-sZq">
+                                            <rect key="frame" x="10" y="69.5" width="355" height="5"/>
+                                            <color key="tintColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="5" id="Ef7-sv-crI"/>
+                                            </constraints>
+                                        </progressView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 KB/S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7G-2n-4Hp">
+                                            <rect key="frame" x="10" y="0.0" width="104.5" height="69.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="G7G-2n-4Hp" secondAttribute="height" multiplier="3:2" id="2KD-cw-DMI"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nv9-kp-QzE" customClass="DownloadButton" customModule="Example">
+                                            <rect key="frame" x="305" y="19" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="Qr9-sH-nnn"/>
+                                                <constraint firstAttribute="width" constant="40" id="ykx-4A-Hvg"/>
+                                            </constraints>
+                                            <state key="normal" image="resume"/>
+                                            <state key="selected" image="suspend"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="5as-4P-sZq" secondAttribute="trailing" constant="10" id="8tD-n1-6Ii"/>
+                                        <constraint firstItem="5as-4P-sZq" firstAttribute="top" secondItem="G7G-2n-4Hp" secondAttribute="bottom" id="ANj-Jh-ufR"/>
+                                        <constraint firstItem="G7G-2n-4Hp" firstAttribute="top" secondItem="Hgs-Zd-fkt" secondAttribute="top" id="Bm8-58-i15"/>
+                                        <constraint firstItem="Nv9-kp-QzE" firstAttribute="centerY" secondItem="Hgs-Zd-fkt" secondAttribute="centerY" id="DQv-z7-Kvg"/>
+                                        <constraint firstAttribute="bottom" secondItem="5as-4P-sZq" secondAttribute="bottom" constant="5" id="GUS-yn-Oi0"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="G7G-2n-4Hp" secondAttribute="trailing" constant="20" symbolic="YES" id="Lqm-qm-acx"/>
+                                        <constraint firstItem="5as-4P-sZq" firstAttribute="leading" secondItem="Hgs-Zd-fkt" secondAttribute="leading" constant="10" id="VAS-J3-Tsk"/>
+                                        <constraint firstAttribute="trailing" secondItem="Nv9-kp-QzE" secondAttribute="trailing" constant="30" id="oWg-wd-y9b"/>
+                                        <constraint firstItem="G7G-2n-4Hp" firstAttribute="leading" secondItem="Hgs-Zd-fkt" secondAttribute="leading" constant="10" id="uhX-Oy-fD6"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="downloadButton" destination="Nv9-kp-QzE" id="Mjv-pV-eS2"/>
+                                    <outlet property="progressView" destination="5as-4P-sZq" id="N6w-nE-RV9"/>
+                                    <outlet property="speedLabel" destination="G7G-2n-4Hp" id="mIC-KK-pXO"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BeG-vj-TkH" id="Hpu-w5-KmF"/>
+                            <outlet property="delegate" destination="BeG-vj-TkH" id="0DZ-e9-tK4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="OST-pg-Ecr">
+                        <nil key="title"/>
+                        <leftBarButtonItems>
+                            <barButtonItem title="Start" id="zI0-EF-v9m">
+                                <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <connections>
+                                    <action selector="resumeAll:" destination="BeG-vj-TkH" id="uun-js-yR5"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Stop" id="Srs-ob-reS">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="suspendAll:" destination="BeG-vj-TkH" id="WC1-EG-G7B"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <button key="titleView" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Jpb-lj-dib">
+                            <rect key="frame" x="158.5" y="7" width="58" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Example">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <rightBarButtonItems>
+                            <barButtonItem image="delete" id="YTc-od-HZZ">
+                                <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <connections>
+                                    <action selector="removeDownloadTask:" destination="BeG-vj-TkH" id="kyI-GQ-1Sr"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="add" id="PhI-vT-krf">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="addDownloadTask:" destination="BeG-vj-TkH" id="zHG-bn-NHP"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wyS-1t-DLk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7754" y="-4290"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add" width="30" height="30"/>
+        <image name="delete" width="30" height="30"/>
+        <image name="resume" width="40" height="40"/>
+        <image name="suspend" width="40" height="40"/>
+    </resources>
+</document>
