@@ -89,7 +89,6 @@ class ExampleController: UITableViewController {
         tableView.separatorStyle = .none
         DiggerCache.cleanDownloadFiles()
         UIApplication.shared.statusBarStyle = .lightContent
-
         
     }
     
