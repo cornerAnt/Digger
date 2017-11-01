@@ -1,5 +1,5 @@
 <div align=center>
-<img src="https://github.com/cornerAnt/Digger/blob/master/images/logo.png"/>
+<img src="https://github.com/cornerAnt/Digger/blob/master/Images/logo.png"/>
 </div>
 
 [![Version](https://img.shields.io/cocoapods/v/PieCharts.svg?style=flat)]( https://cocoapods.org/pods/Digger)
@@ -13,7 +13,7 @@ Digger是一个轻量的下载框架,一行代码即可实现文件下载任务.
 基于URLSession,纯Swift语言实现,支持链式语法调用,实时下载进度,实时下载速度,断点下载.
 
 <div align=center>
-<img src="https://github.com/cornerAnt/Digger/blob/master/images/demo.gif"/>
+<img src="https://github.com/cornerAnt/Digger/blob/master/Images/demo.gif"/>
 </div>
 
 ## 功能

@@ -1,5 +1,5 @@
 <div align=center>
-<img src="https://github.com/cornerAnt/Digger/blob/master/images/logo.png"/>
+<img src="https://github.com/cornerAnt/Digger/blob/master/Images/logo.png"/>
 </div>
 
 [![Version](http://img.shields.io/cocoapods/v/Digger.svg?style=flat)](https://cocoapods.org/pods/Digger)
@@ -15,7 +15,7 @@ Based on URLSession, pure Swift language implementation, support chain syntax ca
 
 
 <div align=center>
-<img src="https://github.com/cornerAnt/Digger/blob/master/images/demo.gif"/>
+<img src="https://github.com/cornerAnt/Digger/blob/master/Images/demo.gif"/>
 </div>
 
 
