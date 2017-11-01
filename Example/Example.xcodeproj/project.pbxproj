@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		ED72D20C1FA9BCE90068EDFC /* Example.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED72D20B1FA9BCE90068EDFC /* Example.xcassets */; };
-		ED72D20E1FA9CE2A0068EDFC /* Digger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED72D20D1FA9CE2A0068EDFC /* Digger.framework */; };
-		ED72D20F1FA9CE2A0068EDFC /* Digger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED72D20D1FA9CE2A0068EDFC /* Digger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EDBFF95C1FA9587E00967C52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBFF95B1FA9587E00967C52 /* AppDelegate.swift */; };
 		EDBFF9611FA9587E00967C52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBFF95F1FA9587E00967C52 /* Main.storyboard */; };
 		EDBFF9661FA9587E00967C52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBFF9641FA9587E00967C52 /* LaunchScreen.storyboard */; };
@@ -24,7 +22,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				ED72D20F1FA9CE2A0068EDFC /* Digger.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,7 +30,6 @@
 
 /* Begin PBXFileReference section */
 		ED72D20B1FA9BCE90068EDFC /* Example.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Example.xcassets; sourceTree = "<group>"; };
-		ED72D20D1FA9CE2A0068EDFC /* Digger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Digger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBFF9581FA9587E00967C52 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBFF95B1FA9587E00967C52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDBFF9601FA9587E00967C52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,7 +44,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED72D20E1FA9CE2A0068EDFC /* Digger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +53,6 @@
 		EDBFF94F1FA9587E00967C52 = {
 			isa = PBXGroup;
 			children = (
-				ED72D20D1FA9CE2A0068EDFC /* Digger.framework */,
 				EDBFF95A1FA9587E00967C52 /* Example */,
 				EDBFF9591FA9587E00967C52 /* Products */,
 			);
@@ -119,7 +113,7 @@
 				TargetAttributes = {
 					EDBFF9571FA9587E00967C52 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -299,11 +293,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = github.cornerant.Digger.Example;
+				PRODUCT_BUNDLE_IDENTIFIER = github.cornerant.Digger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -314,11 +310,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Example/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = github.cornerant.Digger.Example;
+				PRODUCT_BUNDLE_IDENTIFIER = github.cornerant.Digger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
