@@ -151,8 +151,8 @@ extension DiggerDelegate {
         
         
         DispatchQueue.main.safeAsync {
-            diggerSeed.callback.progress?(diggerSeed.progress)
-            
+            _ = diggerSeed.callbacks.map{ $0.progress?(diggerSeed.progress) }
+
         }
         
     }
@@ -181,7 +181,7 @@ extension DiggerDelegate {
             
         }
         DispatchQueue.main.safeAsync {
-            diggerSeed.callback.completion?(result)
+            _ = diggerSeed.callbacks.map{ $0.completion?(result) }
         }
         notifySpeedZeroCallbackZero(diggerSeed)
         
@@ -223,7 +223,7 @@ extension DiggerDelegate {
             
             DispatchQueue.main.safeAsync {
                 
-                diggerSeed.callback.speed?(speed)
+                _ = diggerSeed.callbacks.map{ $0.speed?(speed) }
             }
         }
         
@@ -234,8 +234,8 @@ extension DiggerDelegate {
     
     public func notifySpeedZeroCallbackZero(_ diggerSeed : DiggerSeed){
         DispatchQueue.main.safeAsync {
-            diggerSeed.callback.speed?(0)
-            
+            _ = diggerSeed.callbacks.map{ $0.speed?(0) }
+
         }
     }
     

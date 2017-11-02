@@ -20,7 +20,7 @@ public  class DiggerSeed {
     var downloadTask: URLSessionDataTask
     var url : URL
     var progress  = Progress()
-    var callback = Callback(nil,nil,nil)
+    var callbacks = [Callback]()
     var cancelSemaphore: DispatchSemaphore?
     var tempPath  : String {
         return DiggerCache.tempPath(url: url)
@@ -50,7 +50,24 @@ public  class DiggerSeed {
     @discardableResult
     public  func progress( _ progress:  @escaping ProgressCallback) -> Self {
         
+        var callback = Callback(nil,nil,nil)
         callback.progress = progress
+        callbacks.append(callback)
+        
+        return self
+    }
+    
+    
+    /// downloading speed
+    ///
+    /// - Parameter speed: downloading speed, Unit: Bytes
+    /// - Returns: DiggerSeed
+    @discardableResult
+    public  func speed( _ speed:  @escaping SpeedCallback) -> Self {
+        
+        var callback = Callback(nil,nil,nil)
+        callback.speed = speed
+        callbacks.append(callback)
         
         return self
     }
@@ -62,21 +79,12 @@ public  class DiggerSeed {
     @discardableResult
     public  func completion( _ completion:  @escaping CompletionCallback) -> Self {
         
+        var callback = Callback(nil,nil,nil)
         callback.completion = completion
-        return self
-    }
-    
-    /// downloading speed
-    ///
-    /// - Parameter speed: downloading speed, Unit: Bytes
-    /// - Returns: DiggerSeed
-    @discardableResult
-    public  func speed( _ speed:  @escaping SpeedCallback) -> Self {
-        callback.speed = speed
+        callbacks.append(callback)
         
         return self
     }
-    
     
     
 }
