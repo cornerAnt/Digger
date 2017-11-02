@@ -15,6 +15,16 @@
 		EDBFF9701FA9594F00967C52 /* ExampleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBFF96E1FA9594F00967C52 /* ExampleController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		ED0978E61FAAA1E8008A64E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED0978E21FAAA1E8008A64E0 /* Digger.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EDBFF98E1FA9ADEF00967C52;
+			remoteInfo = Digger;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		EDBFF9811FA998E800967C52 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -29,6 +39,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ED0978E21FAAA1E8008A64E0 /* Digger.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Digger.xcodeproj; path = ../Digger.xcodeproj; sourceTree = "<group>"; };
 		ED72D20B1FA9BCE90068EDFC /* Example.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Example.xcassets; sourceTree = "<group>"; };
 		EDBFF9581FA9587E00967C52 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDBFF95B1FA9587E00967C52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,11 +61,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED0978E31FAAA1E8008A64E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED0978E71FAAA1E8008A64E0 /* Digger.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		EDBFF94F1FA9587E00967C52 = {
 			isa = PBXGroup;
 			children = (
 				EDBFF95A1FA9587E00967C52 /* Example */,
 				EDBFF9591FA9587E00967C52 /* Products */,
+				ED0978E21FAAA1E8008A64E0 /* Digger.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,12 +148,28 @@
 			mainGroup = EDBFF94F1FA9587E00967C52;
 			productRefGroup = EDBFF9591FA9587E00967C52 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = ED0978E31FAAA1E8008A64E0 /* Products */;
+					ProjectRef = ED0978E21FAAA1E8008A64E0 /* Digger.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				EDBFF9571FA9587E00967C52 /* Example */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		ED0978E71FAAA1E8008A64E0 /* Digger.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Digger.framework;
+			remoteRef = ED0978E61FAAA1E8008A64E0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EDBFF9561FA9587E00967C52 /* Resources */ = {
