@@ -13,6 +13,9 @@ Digger is a lightweight download framework that requires only one line of code t
 
 Based on URLSession, pure Swift language implementation, support chain syntax call, real-time download progress, real-time download speed, breakpoint download.
 
+The user forces the app to be shut down, for example by sliding off the app.
+Digger can still resume downloading tasks.
+
 
 <div align=center>
 <img src="https://github.com/cornerAnt/Digger/blob/master/Images/demo.gif"/>

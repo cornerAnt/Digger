@@ -12,6 +12,9 @@ Digger是一个轻量的下载框架,一行代码即可实现文件下载任务.
 
 基于URLSession,纯Swift语言实现,支持链式语法调用,实时下载进度,实时下载速度,断点下载.
 
+用户强制关闭app,例如上滑关闭app. Digger依然可以恢复下载任务.
+
+
 <div align=center>
 <img src="https://github.com/cornerAnt/Digger/blob/master/Images/demo.gif"/>
 </div>
