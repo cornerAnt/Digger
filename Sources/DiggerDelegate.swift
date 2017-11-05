@@ -131,7 +131,6 @@ extension DiggerDelegate :URLSessionDataDelegate,URLSessionDelegate {
             
             notifyCompletionCallback( Result.success(diggerSeed.cacheFileURL), diggerSeed)
             
-            DiggerCache.moveItem(atPath: diggerSeed.tempPath, toPath: diggerSeed.cachePath)
         }
         
         diggerSeed.outputStream?.close()
@@ -169,21 +168,24 @@ extension DiggerDelegate {
                 // If a task is cancelled, the temporary file will be deleted
                 DiggerCache.removeItem(atPath: diggerSeed.tempPath)
                 
-                manager.removeDigeerSeed(for: diggerSeed.url)
             }
             
             diggerLog(error)
             
         case .success(let url) :
             
-            manager.removeDigeerSeed(for: diggerSeed.url)
+            DiggerCache.moveItem(atPath: diggerSeed.tempPath, toPath: diggerSeed.cachePath)
+            
             diggerLog("download success \n" + url.absoluteString)
             
         }
+        
+        manager.removeDigeerSeed(for: diggerSeed.url)
+
         DispatchQueue.main.safeAsync {
             _ = diggerSeed.callbacks.map{ $0.completion?(result) }
         }
-        notifySpeedZeroCallbackZero(diggerSeed)
+        notifySpeedZeroCallback(diggerSeed)
         
         
         
@@ -232,7 +234,7 @@ extension DiggerDelegate {
     
     /// speed shoul be zero, when cancel or suspend
     
-    public func notifySpeedZeroCallbackZero(_ diggerSeed : DiggerSeed){
+    public func notifySpeedZeroCallback(_ diggerSeed : DiggerSeed){
         DispatchQueue.main.safeAsync {
             _ = diggerSeed.callbacks.map{ $0.speed?(0) }
 
