@@ -256,7 +256,7 @@ extension DiggerManager{
                 }
                 if diggerSeed.downloadTask.state == .running{
                     diggerSeed.downloadTask.suspend()
-                    diggerDelegate?.notifySpeedZeroCallbackZero(diggerSeed)
+                    diggerDelegate?.notifySpeedZeroCallback(diggerSeed)
                 }
             }
         }
