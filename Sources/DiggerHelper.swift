@@ -24,6 +24,7 @@ public enum DiggerError: Int {
     case badURL = 9981
     case fileIsExist = 9982
     case fileInfoError = 9983
+    case invalidStatusCode = 9984
     case diskOutOfSpace = 9985
     case downloadCanceled = -999
     

@@ -30,8 +30,19 @@ extension DiggerDelegate :URLSessionDataDelegate,URLSessionDelegate {
             notifyCompletionCallback(Result.failure(error), diggerSeed)
             return
         }
-        
-        
+        /// status code
+        if let statusCode = (response as? HTTPURLResponse)?.statusCode,
+            !(200..<400).contains(statusCode){
+            
+            let error = NSError(domain: DiggerErrorDomain,
+                                code: DiggerError.invalidStatusCode.rawValue,
+                                userInfo: ["statusCode": statusCode, NSLocalizedDescriptionKey: HTTPURLResponse.localizedString(forStatusCode: statusCode)])
+            
+            notifyCompletionCallback(Result.failure(error), diggerSeed)
+            
+            return
+        }
+
         guard let responseHeaders = (response as? HTTPURLResponse)?.allHeaderFields as? [String:String] else {
             return
         }
@@ -232,7 +243,7 @@ extension DiggerDelegate {
         
     }
     
-    /// speed shoul be zero, when cancel or suspend
+    /// speed should be zero, when cancel or suspend
     
     public func notifySpeedZeroCallback(_ diggerSeed : DiggerSeed){
         DispatchQueue.main.safeAsync {
