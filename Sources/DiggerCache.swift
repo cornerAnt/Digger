@@ -19,12 +19,12 @@ public class DiggerCache {
     }
     
     
-    static func tempPath(url : URL ) -> String{
+    public static func tempPath(url : URL ) -> String{
         
         return url.absoluteString.md5.tmpDir
     }
     
-    static func cachePath(url : URL ) -> String{
+    public static func cachePath(url : URL ) -> String{
         
         return  cachesDirectory.cacheDir + "/" + url.lastPathComponent
     }
