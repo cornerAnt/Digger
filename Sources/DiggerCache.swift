@@ -132,8 +132,8 @@ extension DiggerCache {
     
     public static func isFileExistOrDownloading(atAbosultePath filePath : String ) -> Bool {
         
-        let url = URL(fileURLWithPath: filePath)
-        return FileManager.default.fileExists(atPath: cachePath(url: url)) || FileManager.default.fileExists(atPath: tempPath(url: url))
+        return isFileExist(atAbosultePath: filePath) ||
+            FileManager.default.fileExists(atPath: tempPath(url: URL(fileURLWithPath: filePath)))
     }
     
     /// fileSize
