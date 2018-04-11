@@ -64,14 +64,21 @@ open class DiggerManager:DiggerManagerProtocol {
             
             let count = maxConcurrentTasksCount == 0 ?  1 : maxConcurrentTasksCount
             session.invalidateAndCancel()
-            session = setupSession(allowsCellularAccess, count)
+            session = setupSession(allowsCellularAccess, count, additionalHTTPHeaders)
         }
     }
     
     public var allowsCellularAccess: Bool = true {
         didSet{
             session.invalidateAndCancel()
-            session = setupSession(allowsCellularAccess, maxConcurrentTasksCount)
+            session = setupSession(allowsCellularAccess, maxConcurrentTasksCount, additionalHTTPHeaders)
+        }
+    }
+
+    public var additionalHTTPHeaders: [String: String] = [:] {
+        didSet {
+            session.invalidateAndCancel()
+            session = setupSession(allowsCellularAccess, maxConcurrentTasksCount, additionalHTTPHeaders)
         }
     }
     
@@ -90,6 +97,7 @@ open class DiggerManager:DiggerManagerProtocol {
         let sessionConfiguration = URLSessionConfiguration.default
         sessionConfiguration.allowsCellularAccess = allowsCellularAccess
         sessionConfiguration.httpMaximumConnectionsPerHost = maxConcurrentTasksCount
+        sessionConfiguration.httpAdditionalHeaders = additionalHTTPHeaders
         session = URLSession(configuration: sessionConfiguration, delegate: diggerDelegate, delegateQueue: delegateQueue)
     }
     
@@ -100,11 +108,12 @@ open class DiggerManager:DiggerManagerProtocol {
     
     
     
-    private func setupSession(_ allowsCellularAccess:Bool ,_ maxDownloadTasksCount:Int ) -> URLSession{
+    private func setupSession(_ allowsCellularAccess:Bool ,_ maxDownloadTasksCount:Int, _ additionalHTTPHeaders:[String:String] ) -> URLSession{
         diggerDelegate = DiggerDelegate()
         let sessionConfiguration = URLSessionConfiguration.default
         sessionConfiguration.allowsCellularAccess = allowsCellularAccess
         sessionConfiguration.httpMaximumConnectionsPerHost = maxDownloadTasksCount
+        sessionConfiguration.httpAdditionalHeaders = additionalHTTPHeaders
         let session = URLSession(configuration: sessionConfiguration, delegate: diggerDelegate, delegateQueue: delegateQueue)
         
         return session
