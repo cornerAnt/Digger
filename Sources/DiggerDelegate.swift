@@ -49,8 +49,7 @@ extension DiggerDelegate :URLSessionDataDelegate,URLSessionDelegate {
         
         
         // rangeString    String    "bytes 9660646-72300329/72300330"
-        if let totalBytesString = responseHeaders["Content-Range"]?.components(separatedBy: "-").last?.components(separatedBy: "/").last ,
-            let totalBytes = Int64(totalBytesString)  {
+        if let totalBytesString = responseHeaders["Content-Length"], let totalBytes = Int64(totalBytesString) {
             diggerSeed.progress.totalUnitCount = totalBytes
         }
         
