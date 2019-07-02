@@ -192,17 +192,22 @@ class ExampleController: UITableViewController {
          tableView.reloadData()
     }
     
-    var exmpleArray = ["http://video.feidieshuo.com/mp4/%E9%A3%9E%E7%A2%9F%E4%B8%80%E5%88%86%E9%92%9F/672.%E5%A5%B3%E7%A5%A8%E5%A6%82%E7%8B%BC%E4%BC%BC%E8%99%8E%EF%BC%8C%E5%BB%B6%E6%97%B6%E5%96%B7%E9%9B%BE%E9%9D%A0%E4%B8%8D%E9%9D%A0%E8%B0%B1%EF%BC%9F%EF%BC%88%E4%B8%BB%E7%AB%99%EF%BC%89.mp4"]
+    var exmpleArray = ["http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"]
     
     var sorceArray = [
-             "http://video.feidieshuo.com/mp4/%E9%A3%9E%E7%A2%9F%E4%B8%80%E5%88%86%E9%92%9F/672.%E5%A5%B3%E7%A5%A8%E5%A6%82%E7%8B%BC%E4%BC%BC%E8%99%8E%EF%BC%8C%E5%BB%B6%E6%97%B6%E5%96%B7%E9%9B%BE%E9%9D%A0%E4%B8%8D%E9%9D%A0%E8%B0%B1%EF%BC%9F%EF%BC%88%E4%B8%BB%E7%AB%99%EF%BC%89.mp4",
-              "http://video.feidieshuo.com/mp4/%E9%A3%9E%E7%A2%9F%E4%B8%80%E5%88%86%E9%92%9F/673.%E5%A4%B1%E6%81%8B%E8%80%8C%E5%B7%B2%EF%BC%8C%E6%80%8E%E4%B9%88%E5%B0%B1%E7%96%BC%E5%BE%97%E5%83%8F%E4%B8%96%E7%95%8C%E6%9C%AB%E6%97%A5%EF%BC%88%E5%86%85%E6%B6%B5%EF%BC%89.mp4",
-              "http://video.feidieshuo.com/mp4/%E9%A3%9E%E7%A2%9F%E4%B8%80%E5%88%86%E9%92%9F/674.%E5%BC%BA%E5%8D%96%E4%BA%BA%E8%AE%BE%EF%BC%9F%E7%BA%A2%E8%B5%B7%E6%9D%A5%E5%BF%AB%EF%BC%8C%E5%B4%A9%E8%B5%B7%E6%9D%A5%E6%9B%B4%E5%BF%AB%EF%BC%88%E4%B8%BB%E7%AB%99%EF%BC%89.mp4",
-              "http://video.feidieshuo.com/mp4/%E9%A3%9E%E7%A2%9F%E4%B8%80%E5%88%86%E9%92%9F/675.%E6%88%91%E4%BB%AC%E4%B8%8D%E9%AA%97%EF%BC%81%E4%B8%8D%E6%8A%A2%EF%BC%81%E4%B8%8D%E5%81%B7%E4%BA%95%E7%9B%96%EF%BC%81%E8%B0%A2%E8%B0%A2%EF%BC%81%EF%BC%88%E4%B8%BB%E7%AB%99%EF%BC%89.mp4",
-              "http://video.feidieshuo.com/mp4/%E9%A3%9E%E7%A2%9F%E4%B8%80%E5%88%86%E9%92%9F/676-%E5%85%AC%E5%85%B3%E6%96%87%E6%8E%90%E6%9E%B6%EF%BC%8C%E6%88%91%E5%8F%AA%E6%9C%8D%E9%80%81%E9%94%A4%E6%A1%90%E5%AD%90%EF%BC%88%E4%B8%BB%E7%AB%99%EF%BC%89.mp4",
-              "http://video.feidieshuo.com/mp4/%E9%A3%9E%E7%A2%9F%E4%B8%80%E5%88%86%E9%92%9F/677-%E4%B8%8D%E8%88%92%E6%9C%8D%E7%9A%84%E5%8F%A3%E7%BD%A9%E6%A0%B9%E6%9C%AC%E9%85%8D%E4%B8%8D%E4%B8%8A%E4%BC%98%E7%A7%80%E7%9A%84%E6%88%91%EF%BC%88%20%E5%86%85%E6%B6%B5%EF%BC%89.mp4",
-              "http://video.feidieshuo.com/mp4/%E9%A3%9E%E7%A2%9F%E4%B8%80%E5%88%86%E9%92%9F/678.%E6%B0%B4%E6%9E%9C%E9%85%B5%E7%B4%A0%E8%83%BD%E6%8E%92%E6%AF%92%EF%BC%9F%E5%BF%BD%E6%82%A0%EF%BC%8C%E4%BD%A0%E6%8E%A5%E7%9D%80%E5%BF%BD%E6%82%A0%EF%BC%88%E5%86%85%E6%B6%B5%EF%BC%89.mp4",
-                      ]
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4",
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4"
+    ]
     
     
 }
