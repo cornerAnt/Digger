@@ -55,7 +55,7 @@ open class DiggerManager:DiggerManagerProtocol {
     open var timeout: TimeInterval = 100
     fileprivate var diggerSeeds = [URL: DiggerSeed]()
     fileprivate var session: URLSession
-    fileprivate var diggerDelegate: DiggerDelegate?
+    fileprivate var diggerDelegate: DiggerDelegate?  // swiftlint:disable:this weak_delegate
     fileprivate let barrierQueue = DispatchQueue.barrier
     fileprivate let delegateQueue = OperationQueue.downloadDelegateOperationQueue
     
